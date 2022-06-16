@@ -1,0 +1,7 @@
+{
+  "name": "google-api-token-generator",
+  "version": "1.0.0",
+  "dependencies": {
+    "googleapis": "^67.0.0"
+  }
+}

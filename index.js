@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { google } = require('googleapis');
 const settings = require('./settings.json');
 

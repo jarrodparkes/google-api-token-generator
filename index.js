@@ -1,12 +1,22 @@
 #!/usr/bin/env node
 
 const { google } = require('googleapis');
-const settings = require('./settings.json');
+
+// Get args.
+const args = process.argv.slice(2);
+
+// Get paths.
+const tempDirectory = args[0];
+const settingsPath = `${tempDirectory}/settings.json`;
+const serviceAccountPath = `${tempDirectory}/service-account.json`;
+
+// Get settings.
+const settings = require(settingsPath);
 
 // Generate access token.
 function getAccessToken() {
   return new Promise(function (resolve, reject) {
-    const key = require('./service-account.json');
+    const key = require(serviceAccountPath);
     const jwtClient = new google.auth.JWT(
       key.client_email,
       null,

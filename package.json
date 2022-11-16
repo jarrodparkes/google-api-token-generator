@@ -1,5 +1,5 @@
 {
-    "name": "@jarrodparkes/google-api-token-generator",
+    "name": "google-api-token-generator",
     "version": "1.0.0",
     "description": "A simple tool for generating an access token for Google APIs.",
     "bin": "index.js",
